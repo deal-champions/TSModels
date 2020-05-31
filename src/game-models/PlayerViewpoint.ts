@@ -24,6 +24,10 @@ export class PlayerViewpoint extends SerializableClass {
   // /// Analysis, datapoints and other objects that will help the parties to analyse the situation
   // List<DealContextObject> dealContext;
 
+  /** The viewpoint name - e.g. Buyer, Seller, VC, Founder, etc. */
+  @JsonProperty('name', String)
+  public name: string;
+
   // We need this to be able to serialize this object correctly.
   @JsonProperty('_numberTermsViewpoints', [NumberTermViewpoint])
   private _numberTermsViewpoints: NumberTermViewpoint[] = [];
@@ -63,16 +67,23 @@ export class PlayerViewpoint extends SerializableClass {
   @JsonProperty('scenario', Scenario)
   public scenario: Scenario;
 
-  constructor(opts?: { batna: number; termsViewpoints: TermViewpoint[]; scenario: Scenario }) {
+  constructor(opts?: {
+    batna: number;
+    name: string;
+    termsViewpoints: TermViewpoint[];
+    scenario: Scenario;
+  }) {
     super();
     if (!opts) {
       Logger.warnUninitializedClass();
       this.batna = 0;
       this.scenario = null!;
+      this.name = null!;
       return;
     }
     this.batna = opts.batna;
     this.termsViewpoints = opts.termsViewpoints;
     this.scenario = opts.scenario;
+    this.name = opts.name;
   }
 }
