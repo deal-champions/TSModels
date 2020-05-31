@@ -1,8 +1,11 @@
-import { ListTerm, NumberTerm } from '../models/deal-terms/DealTerms';
-import { ListTermViewpoint, NumberTermViewpoint } from '../models/term-viewpoints/TermViewpoints';
-import { PlayerViewpoint } from '../models/PlayerViewpoint';
-import { Scenario } from '../models/Scenario';
-import { Player } from '../models/Player';
+import { ListTerm, NumberTerm } from '../game-models/deal-terms/DealTerms';
+import {
+  ListTermViewpoint,
+  NumberTermViewpoint
+} from '../game-models/term-viewpoints/TermViewpoints';
+import { PlayerViewpoint } from '../game-models/PlayerViewpoint';
+import { Scenario } from '../game-models/Scenario';
+import { Player } from '../game-models/Player';
 
 export const TypeStringToConstructorMap = {
   [NumberTerm.name]: NumberTerm,

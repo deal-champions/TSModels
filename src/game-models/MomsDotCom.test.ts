@@ -36,6 +36,7 @@ const MomsDotCom = new Scenario({
 });
 
 const buyerViewpoint = new PlayerViewpoint({
+  name: 'Buyer',
   batna: 3,
   termsViewpoints: [
     new NumberTermViewpoint({
@@ -64,6 +65,7 @@ const buyerViewpoint = new PlayerViewpoint({
 });
 
 const sellerViewpoint = new PlayerViewpoint({
+  name: 'Seller',
   batna: 3.5,
   termsViewpoints: [
     // new NumberTermViewpoint(LicesncingFeeTerm, true, 0),
