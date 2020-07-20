@@ -24,5 +24,5 @@ export interface LiveGame {
   offers: Offer[];
 
   /** The scenario for this game */
-  scenarioId: ScenarioId;
+  scenarioId: keyof typeof ScenarioId;
 }

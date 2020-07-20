@@ -17,5 +17,5 @@ export interface League {
   requiredPlayers: number;
 
   /** The Id of the scenario for this league. */
-  scenarioId: ScenarioId;
+  scenarioId: keyof typeof ScenarioId;
 }
