@@ -1,18 +1,10 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "esnext",
-    "module": "ES6",
-    "lib": ["es6"],
-    "strict": true,
-    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es2015",
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "declarationDir": "dist/types",
-    "outDir": "dist/lib",
-    "typeRoots": ["node_modules/@types"]
+    "outDir": "./dist"
   },
-  "include": ["src", "models.ts"]
+  "include": ["src/"],
+  "exclude": ["src/v1/**/*"]
 }
