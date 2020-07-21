@@ -1,10 +1,13 @@
 {
   "name": "@dealchampions/ts-models",
-  "version": "0.4.4",
+  "version": "0.4.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1"
+  },
+  "scripts": {
+    "prepublish": "tsc"
   }
 }
