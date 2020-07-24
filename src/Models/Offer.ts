@@ -1,7 +1,7 @@
 /** The offers that players submit to each other during the game */
 export interface Offer {
   /** The UserId of the offerer. */
-  offerrerId: string;
+  userId: string;
 
   /** A map representing the values of the terms. The backend will NOT do any validation here. */
   terms: {
@@ -10,5 +10,5 @@ export interface Offer {
   };
 
   /** If the offer has been withdrawn. */
-  withdrawn: boolean;
+  isWithdrawn: boolean;
 }

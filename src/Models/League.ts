@@ -1,9 +1,10 @@
-import { ScenarioId } from './Scenarios';
+import { ScenarioId } from "./Scenarios";
+import { CollectionModel } from "./CollectionModel";
 
 /**
  * The League object represent a League that the user can register to.
  */
-export interface League {
+export interface League extends CollectionModel {
   /** The registered users for this league. */
   registeredPlayerIds: string[];
 

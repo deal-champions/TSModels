@@ -1,5 +1,6 @@
 import { Offer } from "./Offer";
 import { ScenarioId } from "./Scenarios";
+import { CollectionModel } from "./CollectionModel";
 
 export enum LiveGameStatus {
   /** The game is live and being played */
@@ -13,7 +14,7 @@ export enum LiveGameStatus {
 }
 
 /**  */
-export interface LiveGame {
+export interface LiveGame extends CollectionModel {
   /** The userIds of the players in this game.  */
   playerIds: string[];
 
